@@ -12,6 +12,7 @@ Brief() {
 
 
 Voice-Allocator(midi-event N) {
+;; Given a MIDI event stream `midi-event` and a number of voices as invariant constant (like #4), generates a vector of note-gate pairs into which active MIDI notes will be assigned. The allocator prioritizes newer notes, and held notes more than released notes.
 (nvyw5c8c0h1jr2ts-0) = (na004o3838jju9ea-0 & n71cphxc11c7plss-0)
 (nmtj7fwrb3kq9vd-0) = (n71cphxc11c7plss-0 & n3269sjsnptxgsec-0)
 (nacib7yf50ebldgq-0) = Algorithm:Expand(n2ayer3m1f36vr2m-1 nsvqea1kr6ewfo6i-0 n3x9ghwcaqsy6j72-0)

@@ -1,4 +1,5 @@
-{:identifier "Voice-Allocator"
+{:documentation "Given a MIDI event stream `midi-event` and a number of voices as invariant constant (like #4), generates a vector of note-gate pairs into which active MIDI notes will be assigned. The allocator prioritizes newer notes, and held notes more than released notes."
+ :identifier "Voice-Allocator"
  :identity "1c3mhid2ab98tnm"
  :patch
 {:cables
