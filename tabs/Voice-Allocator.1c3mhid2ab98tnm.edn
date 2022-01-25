@@ -1,0 +1,164 @@
+{:identifier "Voice-Allocator"
+ :identity "1c3mhid2ab98tnm"
+ :patch
+{:cables
+{["2ayer3m1f36vr2m" 0] [:fixed "87ca8p2s38e5c82" 0]
+ ["2ayer3m1f36vr2m" 1] [:fixed "pdkn440qitwr2qf" 0]
+ ["3269sjsnptxgsec" 0] [:fixed "2ayer3m1f36vr2m" 0]
+ ["3olssta0a8fknmu" 0] [:fixed "749sm17wttwf3hv" 0]
+ ["3olssta0a8fknmu" 1] [:fixed "mtj7fwrb3kq9vd" 0]
+ ["6uh4ce9p8uak46" 0] [:fixed "6e49tdpp606pak0" 0]
+ ["6uh4ce9p8uak46" 1] [:fixed "3olssta0a8fknmu" 0]
+ ["71cphxc11c7plss" 0] [:fixed "2ayer3m1f36vr2m" 0]
+ ["749sm17wttwf3hv" 0] [:fixed "dq9t8hq03wsy0ba" 0]
+ ["749sm17wttwf3hv" 1] [:fixed "vyw5c8c0h1jr2ts" 0]
+ ["749sm17wttwf3hv" 2] [:fixed "t2r4oxnsc48cqk1" 0]
+ ["a004o3838jju9ea" 0] [:fixed "2ayer3m1f36vr2m" 0]
+ ["acib7yf50ebldgq" 0] [:fixed "2ayer3m1f36vr2m" 1]
+ ["acib7yf50ebldgq" 1] [:fixed "svqea1kr6ewfo6i" 0]
+ ["acib7yf50ebldgq" 2] [:fixed "3x9ghwcaqsy6j72" 0]
+ ["dq9t8hq03wsy0ba" 0] [:fixed "acib7yf50ebldgq" 0]
+ ["dq9t8hq03wsy0ba" 1] [:fixed "3olssta0a8fknmu" 0]
+ ["mtj7fwrb3kq9vd" 0] [:fixed "71cphxc11c7plss" 0]
+ ["mtj7fwrb3kq9vd" 1] [:fixed "3269sjsnptxgsec" 0]
+ ["t2r4oxnsc48cqk1" 0] [:fixed "2ayer3m1f36vr2m" 0]
+ ["vyw5c8c0h1jr2ts" 0] [:fixed "a004o3838jju9ea" 0]
+ ["vyw5c8c0h1jr2ts" 1] [:fixed "71cphxc11c7plss" 0]}
+ :nodes
+{"2ayer3m1f36vr2m" 
+{:color 0
+ :default-params 
+{"N" "nil"
+ "midi-event" "nil"}
+ :inputs ["midi-event" "N"]
+ :label "(midi-event N) = arg"
+ :outputs ["midi-event" "N"]
+ :parsed "arg"
+ :pos [-397 -187]
+ }
+ "3269sjsnptxgsec" 
+{:color 4
+ :inputs ["midi-event"]
+ :label "MIDI:Note-Off?($midi-event)"
+ :outputs [""]
+ :parsed [:fn "MIDI:Note-Off?" [:tuple [:free-var "midi-event"]]]
+ :pos [-6 -71]
+ }
+ "3olssta0a8fknmu" 
+{:inputs ["voices" "remove-note"]
+ :label "Remove-Voice($voices $remove-note)"
+ :outputs [""]
+ :parsed [:fn "Remove-Voice" [:tuple [:free-var "voices"] [:free-var "remove-note"]]]
+ :pos [408 85]
+ }
+ "3x9ghwcaqsy6j72" 
+{:color 3
+ :inputs []
+ :label "(0 -1 0)"
+ :outputs [""]
+ :parsed [:tuple [:float "0"] [:float "-1"] [:float "0"]]
+ :pos [-77 -292]
+ }
+ "6e49tdpp606pak0" 
+{:inputs ["pair"]
+ :label "Rest($pair)"
+ :outputs [""]
+ :parsed [:fn "Rest" [:tuple [:free-var "pair"]]]
+ :pos [372 192]
+ }
+ "6uh4ce9p8uak46" 
+{:ephemeral-inputs #{"set"}
+ :inputs ["func" "set" "set..."]
+ :label "Algorithm:Map($func $set...)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set"] [:free-var "set..."]]]
+ :pos [516 192]
+ }
+ "71cphxc11c7plss" 
+{:color 2
+ :inputs ["event"]
+ :label "MIDI:A($event)"
+ :outputs [""]
+ :parsed [:fn "MIDI:A" [:tuple [:free-var "event"]]]
+ :pos [-256 0]
+ }
+ "749sm17wttwf3hv" 
+{:inputs ["voices" "note" "velocity"]
+ :label "Add-Voice($voices $note $velocity)"
+ :outputs [""]
+ :parsed [:fn "Add-Voice" [:tuple [:free-var "voices"] [:free-var "note"] [:free-var "velocity"]]]
+ :pos [60 138]
+ }
+ "87ca8p2s38e5c82" 
+{:color 0
+ :inputs []
+ :label "(|'|'||'|'|'|)"
+ :outputs ["midi-event"]
+ :parsed [:midi-input]
+ :pos [-549 -213]
+ }
+ "a004o3838jju9ea" 
+{:color 2
+ :inputs ["midi-event"]
+ :label "MIDI:Note-On?($midi-event)"
+ :outputs [""]
+ :parsed [:fn "MIDI:Note-On?" [:tuple [:free-var "midi-event"]]]
+ :pos [-231 129]
+ }
+ "acib7yf50ebldgq" 
+{:color 3
+ :inputs ["count" "iterator" "seed"]
+ :label "Algorithm:Expand($count $iterator $seed)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Expand" [:tuple [:free-var "count"] [:free-var "iterator"] [:free-var "seed"]]]
+ :pos [91 -137]
+ }
+ "dq9t8hq03wsy0ba" 
+{:inputs ["init" "sig~"]
+ :label "z-1($init $sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "init"] [:free-var "sig~"]]]
+ :pos [232 -137]
+ }
+ "mtj7fwrb3kq9vd" 
+{:color 4
+ :inputs ["a" "b" "more..."]
+ :label "&"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "&" [:free-var "b"] [:free-var "more..."]]
+ :pos [175 4]
+ }
+ "pdkn440qitwr2qf" 
+{:color 0
+ :inputs []
+ :label "#8"
+ :outputs [""]
+ :parsed [:invariant "8"]
+ :pos [-470 -326]
+ }
+ "svqea1kr6ewfo6i" 
+{:color 3
+ :inputs []
+ :label "(h t) => (h + 1 t)"
+ :outputs [""]
+ :parsed [:infix [:tuple "h" "t"] "=>" [:tuple [:infix "h" "+" [:float "1"]] "t"]]
+ :pos [-111 -223]
+ }
+ "t2r4oxnsc48cqk1" 
+{:color 2
+ :inputs ["event"]
+ :label "MIDI:B($event)"
+ :outputs [""]
+ :parsed [:fn "MIDI:B" [:tuple [:free-var "event"]]]
+ :pos [-185 -36]
+ }
+ "vyw5c8c0h1jr2ts" 
+{:color 2
+ :inputs ["a" "b" "more..."]
+ :label "&"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "&" [:free-var "b"] [:free-var "more..."]]
+ :pos [-98 99]
+ }}
+ :scale 0.7516382760688093
+ :scroll [0 0]}}

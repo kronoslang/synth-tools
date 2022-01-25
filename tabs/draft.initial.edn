@@ -1,0 +1,52 @@
+{:identity "initial"
+ :patch
+{:cables
+{["9sq6abl8lr8hpqd" 0] [:fixed "wpa2twuh9vi1shs" 0]
+ ["ehvdnn7bk50wspc" 0] [:fixed "9a9ekg9leetw2n1" 0]
+ ["ehvdnn7bk50wspc" 1] [:fixed "3pt8xi6a6bkliyh" 0]
+ ["r1ibsylhtdjbk4l" 0] [:fixed "9sq6abl8lr8hpqd" 0]
+ ["r1ibsylhtdjbk4l" 1] [:fixed "ehvdnn7bk50wspc" 0]}
+ :nodes
+{"3pt8xi6a6bkliyh" 
+{:inputs []
+ :label "#4"
+ :outputs [""]
+ :parsed [:invariant "4"]
+ :pos [-20 -152]
+ }
+ "9a9ekg9leetw2n1" 
+{:inputs []
+ :label "(|'|'||'|'|'|)"
+ :outputs ["midi-event"]
+ :parsed [:midi-input]
+ :pos [-209 -119]
+ }
+ "9sq6abl8lr8hpqd" 
+{:inputs ["A4"]
+ :label "(n g) => Gen:Tri(MIDI:Note->Freq(n $A4)) * g"
+ :outputs [""]
+ :parsed [:infix [:tuple "n" "g"] "=>" [:infix [:fn "Gen:Tri" [:tuple [:fn "MIDI:Note->Freq" [:tuple "n" [:free-var "A4"]]]]] "*" "g"]]
+ :pos [33 45]
+ }
+ "ehvdnn7bk50wspc" 
+{:inputs ["midi-event" "N"]
+ :label "Voice-Allocator($midi-event $N)"
+ :outputs [""]
+ :parsed [:fn "Voice-Allocator" [:tuple [:free-var "midi-event"] [:free-var "N"]]]
+ :pos [23 -63]
+ }
+ "r1ibsylhtdjbk4l" 
+{:ephemeral-inputs #{"set"}
+ :inputs ["func" "set"]
+ :label "Algorithm:Map($func $set)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set"]]]
+ :pos [329 4]
+ }
+ "wpa2twuh9vi1shs" 
+{:inputs []
+ :label "440"
+ :outputs [""]
+ :parsed [:float "440"]
+ :pos [-227 45]
+ }}}}

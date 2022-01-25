@@ -1,0 +1,114 @@
+{:identifier "Add-Voice"
+ :identity "4yy8yvi9p6h991t"
+ :patch
+{:cables
+{["0xeh2077and2n32" 0] [:fixed "2o7rdsq6rzu5ur" 0]
+ ["0xeh2077and2n32" 1] [:fixed "2zdwjgi46daedmu" 0]
+ ["0xeh2077and2n32" 2] [:fixed "y5osfzifxlr9309" 0]
+ ["0xeh2077and2n32" 3] [:fixed "1a27y4r9h1bqfnj" 0]
+ ["1a27y4r9h1bqfnj" 0] [:fixed "uq9zjc0gbftpgm" 2]
+ ["2o7rdsq6rzu5ur" 0] [:fixed "di91d0fr26yr2qa" 0]
+ ["2o7rdsq6rzu5ur" 1] [:fixed "n06qyjv6mqw6kb9" 0]
+ ["2zdwjgi46daedmu" 0] [:fixed "uq9zjc0gbftpgm" 1]
+ ["b89onvxwvcl0388" 0] [:fixed "0xeh2077and2n32" 0]
+ ["b89onvxwvcl0388" 1] [:fixed "uq9zjc0gbftpgm" 0]
+ ["i3iq895i3vnit2l" 0] [:fixed "j57o6xu0yje59si" 0]
+ ["i3iq895i3vnit2l" 1] [:fixed "n06qyjv6mqw6kb9" 0]
+ ["n06qyjv6mqw6kb9" 0] [:fixed "em640r8ux1j81bu" 0]
+ ["n06qyjv6mqw6kb9" 1] [:fixed "uq9zjc0gbftpgm" 0]
+ ["y5osfzifxlr9309" 0] [:fixed "i3iq895i3vnit2l" 0]}
+ :nodes
+{"0xeh2077and2n32" 
+{:inputs ["replace" "nn" "np" "ng"]
+ :label "(p n g) => Algorithm:Choose((p == $replace) & ($nn != 0) ($np $nn $ng) (p n g))"
+ :outputs [""]
+ :parsed [:infix [:tuple "p" "n" "g"] "=>" [:fn "Algorithm:Choose" [:tuple [:infix [:tuple [:infix "p" "==" [:free-var "replace"]]] "&" [:tuple [:infix [:free-var "nn"] "!=" [:float "0"]]]] [:tuple [:free-var "np"] [:free-var "nn"] [:free-var "ng"]] [:tuple "p" "n" "g"]]]]
+ :pos [61 55]
+ }
+ "1a27y4r9h1bqfnj" 
+{:inputs ["a"]
+ :label "/ 127"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "/" [:float "127"]]
+ :pos [193 -15]
+ }
+ "2o7rdsq6rzu5ur" 
+{:ephemeral-inputs #{"set"}
+ :inputs ["func" "set" "set..."]
+ :label "Algorithm:Reduce($func $set...)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Reduce" [:tuple [:free-var "func"] [:free-var "set"] [:free-var "set..."]]]
+ :pos [-235 -185]
+ }
+ "2zdwjgi46daedmu" 
+{:inputs ["a"]
+ :label "+ 0"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:float "0"]]
+ :pos [-268 -120]
+ }
+ "b89onvxwvcl0388" 
+{:ephemeral-inputs #{"set"}
+ :inputs ["func" "set" "set..."]
+ :label "Algorithm:Map($func $set...)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set"] [:free-var "set..."]]]
+ :pos [511 55]
+ }
+ "di91d0fr26yr2qa" 
+{:inputs ["a" "b"]
+ :label "Min($a $b)"
+ :outputs [""]
+ :parsed [:fn "Min" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [-341 -185]
+ }
+ "em640r8ux1j81bu" 
+{:inputs ["pair"]
+ :label "First($pair)"
+ :outputs [""]
+ :parsed [:fn "First" [:tuple [:free-var "pair"]]]
+ :pos [-411 -345]
+ }
+ "i3iq895i3vnit2l" 
+{:ephemeral-inputs #{"set"}
+ :inputs ["func" "set" "set..."]
+ :label "Algorithm:Reduce($func $set...)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Reduce" [:tuple [:free-var "func"] [:free-var "set"] [:free-var "set..."]]]
+ :pos [12 -242]
+ }
+ "j57o6xu0yje59si" 
+{:inputs ["a" "b"]
+ :label "Max($a $b)"
+ :outputs [""]
+ :parsed [:fn "Max" [:tuple [:free-var "a"] [:free-var "b"]]]
+ :pos [-81 -242]
+ }
+ "n06qyjv6mqw6kb9" 
+{:ephemeral-inputs #{"set"}
+ :inputs ["func" "set" "set..."]
+ :label "Algorithm:Map($func $set...)"
+ :outputs [""]
+ :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set"] [:free-var "set..."]]]
+ :pos [-315 -254]
+ }
+ "uq9zjc0gbftpgm" 
+{:default-params 
+{"note" "nil"
+ "velocity" "nil"
+ "voices" "nil"}
+ :inputs ["voices" "note" "velocity"]
+ :label "(voices note velocity) = arg"
+ :outputs ["voices" "note" "velocity"]
+ :parsed "arg"
+ :pos [-488 -146]
+ }
+ "y5osfzifxlr9309" 
+{:inputs ["a"]
+ :label "+ 1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:float "1"]]
+ :pos [105 -242]
+ }}
+ :scale 0.7827716267262915
+ :scroll [0 0]}}

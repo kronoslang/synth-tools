@@ -1,0 +1,13 @@
+{:assets 
+{}
+ :current-tab 1
+ :file "voice (1) (2) (2).veneer"
+ :manifest 
+{:dependencies 
+{}
+ :description "Utilities for building synthesizer patches"
+ :license "https://www.eclipse.org/legal/epl-v10.html"
+ :name "synth-tools"
+ :url "https://kronoslang.io"
+ :version "0.1"}
+ :tabs ("tabs/draft.initial.edn" "tabs/Voice-Allocator.1c3mhid2ab98tnm.edn" "tabs/Add-Voice.4yy8yvi9p6h991t.edn" "tabs/Remove-Voice.7ar3mw8ao1uab6o.edn")}
