@@ -2,7 +2,7 @@
   "dependencies": {},
   "description": "Utilities for building synthesizer patches",
   "license": "https://www.eclipse.org/legal/epl-v10.html",
-  "version": "0.1",
   "name": "synth-tools",
-  "url": "https://kronoslang.io"
+  "url": "https://kronoslang.io",
+  "version": "0.1"
 }

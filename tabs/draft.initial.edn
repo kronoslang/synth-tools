@@ -12,41 +12,35 @@
  :label "#4"
  :outputs [""]
  :parsed [:invariant "4"]
- :pos [-20 -152]
- }
+ :pos [-20 -152]}
  "9a9ekg9leetw2n1" 
 {:inputs []
  :label "(|'|'||'|'|'|)"
  :outputs ["midi-event"]
  :parsed [:midi-input]
- :pos [-209 -119]
- }
+ :pos [-209 -119]}
  "9sq6abl8lr8hpqd" 
 {:inputs ["A4"]
  :label "(n g) => Gen:Tri(MIDI:Note->Freq(n $A4)) * g"
  :outputs [""]
  :parsed [:infix [:tuple "n" "g"] "=>" [:infix [:fn "Gen:Tri" [:tuple [:fn "MIDI:Note->Freq" [:tuple "n" [:free-var "A4"]]]]] "*" "g"]]
- :pos [33 45]
- }
+ :pos [33 45]}
  "ehvdnn7bk50wspc" 
 {:inputs ["midi-event" "N"]
  :label "Voice-Allocator($midi-event $N)"
  :outputs [""]
  :parsed [:fn "Voice-Allocator" [:tuple [:free-var "midi-event"] [:free-var "N"]]]
- :pos [23 -63]
- }
+ :pos [23 -63]}
  "r1ibsylhtdjbk4l" 
 {:ephemeral-inputs #{"set"}
  :inputs ["func" "set"]
  :label "Algorithm:Map($func $set)"
  :outputs [""]
  :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set"]]]
- :pos [329 4]
- }
+ :pos [329 4]}
  "wpa2twuh9vi1shs" 
 {:inputs []
  :label "440"
  :outputs [""]
  :parsed [:float "440"]
- :pos [-227 45]
- }}}}
+ :pos [-227 45]}}}}

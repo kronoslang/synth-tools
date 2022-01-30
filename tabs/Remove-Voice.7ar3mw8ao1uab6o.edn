@@ -12,8 +12,7 @@
  :label "(p n g) => (p - (100 & $rn == n) n g & Not($rn == n))"
  :outputs [""]
  :parsed [:infix [:tuple "p" "n" "g"] "=>" [:tuple [:infix "p" "-" [:tuple [:infix [:float "100"] "&" [:infix [:free-var "rn"] "==" "n"]]]] "n" [:infix "g" "&" [:fn "Not" [:tuple [:infix [:free-var "rn"] "==" "n"]]]]]]
- :pos [1 47]
- }
+ :pos [1 47]}
  "hsvd2ch2pv96jia" 
 {:default-params 
 {"remove-note" "nil"
@@ -22,22 +21,19 @@
  :label "(voices remove-note) = arg"
  :outputs ["voices" "remove-note"]
  :parsed "arg"
- :pos [-432 -176]
- }
+ :pos [-432 -176]}
  "rjgcwzrjz3a4yen" 
 {:inputs ["a"]
  :label "+ 0"
  :outputs [""]
  :parsed [:infix [:free-var "a"] "+" [:float "0"]]
- :pos [-393 -29]
- }
+ :pos [-393 -29]}
  "wf27izqjk0p6tpm" 
 {:ephemeral-inputs #{"set"}
  :inputs ["func" "set" "set..."]
  :label "Algorithm:Map($func $set...)"
  :outputs [""]
  :parsed [:fn "Algorithm:Map" [:tuple [:free-var "func"] [:free-var "set"] [:free-var "set..."]]]
- :pos [360 49]
- }}
+ :pos [360 49]}}
  :scale 0.8243728104391173
  :scroll [0 0]}}
