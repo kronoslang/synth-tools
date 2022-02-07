@@ -21,6 +21,7 @@ Voice-Allocator(midi-event N) {
 (na004o3838jju9ea-0) = MIDI:Note-On?(n2ayer3m1f36vr2m-0)
 (nt2r4oxnsc48cqk1-0) = MIDI:B(n2ayer3m1f36vr2m-0)
 (npdkn440qitwr2qf-0) = #8
+(n9x4eqolk6anvqls-0) = Control:Signal-Coarse(n6uh4ce9p8uak46-0)
 (ndq9t8hq03wsy0ba-0) = z-1(nacib7yf50ebldgq-0 n3olssta0a8fknmu-0)
 (n2ayer3m1f36vr2m-0 n2ayer3m1f36vr2m-1) = arg
 (n6e49tdpp606pak0-0) = (pair) => ( Rest(pair) ) 
@@ -30,7 +31,7 @@ Voice-Allocator(midi-event N) {
 (nsvqea1kr6ewfo6i-0) = ((h t) => ((h + 1) t))
 (n3x9ghwcaqsy6j72-0) = (0 -1 0)
 (n749sm17wttwf3hv-0) = Add-Voice(ndq9t8hq03wsy0ba-0 nvyw5c8c0h1jr2ts-0 nt2r4oxnsc48cqk1-0)
-n6uh4ce9p8uak46-0
+n9x4eqolk6anvqls-0
 }
 
 Add-Voice(voices note velocity) {
